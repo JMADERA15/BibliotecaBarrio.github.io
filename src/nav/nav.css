@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 5%;
+  min-height: 70px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.logo a:hover {
+  transform: scale(1.05);
+  text-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.logo span {
+  color: #ffd700;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Botones de acción */
+.btn-login,
+.btn-docente {
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-login {
+  background-color: #ffd700;
+  color: #333;
+  margin-right: 15px;
+  font-weight: 900;
+}
+
+.btn-login:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+  background-color: #ffed4e;
+  color: #000;
+}
+
+.btn-docente {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-docente:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(245, 87, 108, 0.4);
+  background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+}
+
+/* Menú hamburguesa */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.burger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.burger .line1.toggle {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.burger .line2.toggle {
+  opacity: 0;
+}
+
+.burger .line3.toggle {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+/* Responsive - Tablet y Mobile */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 3%;
+    min-height: 65px;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    height: calc(100vh - 65px);
+    top: 65px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 2rem;
+    transition: right 0.5s ease;
+    z-index: 100;
+  }
+
+  .nav-active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    display: block;
+    padding: 15px 0;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .btn-login,
+  .btn-docente {
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+
+  .btn-login {
+    margin-right: 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 3%;
+    min-height: 60px;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .btn-login,
+  .btn-docente {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
