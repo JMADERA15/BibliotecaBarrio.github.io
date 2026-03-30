@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BibliotecaBarrio.github.io/static/css/main.eb537b19.css",
+    "main.js": "/BibliotecaBarrio.github.io/static/js/main.4bb66721.js",
+    "static/js/453.1875c8a1.chunk.js": "/BibliotecaBarrio.github.io/static/js/453.1875c8a1.chunk.js",
+    "index.html": "/BibliotecaBarrio.github.io/index.html",
+    "main.eb537b19.css.map": "/BibliotecaBarrio.github.io/static/css/main.eb537b19.css.map",
+    "main.4bb66721.js.map": "/BibliotecaBarrio.github.io/static/js/main.4bb66721.js.map",
+    "453.1875c8a1.chunk.js.map": "/BibliotecaBarrio.github.io/static/js/453.1875c8a1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb537b19.css",
+    "static/js/main.4bb66721.js"
+  ]
+}
